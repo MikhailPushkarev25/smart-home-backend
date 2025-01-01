@@ -1,6 +1,7 @@
 package org.example.smarthomebackend.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDateTime;
@@ -15,6 +16,7 @@ public class Device {
     private String type;
     private boolean status;
     private String room;
+    @Column(value = "last_updated")
     private LocalDateTime lastUpdated;
 
     public Long getId() {
