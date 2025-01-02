@@ -7,7 +7,6 @@ import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
 import java.security.PublicKey;
-import java.time.Duration;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +16,6 @@ public class JwtTokenService {
 
     private final PrivateKey privateKey;
     private final PublicKey publicKey;
-    private static final Duration TOKEN_VALIDITY = Duration.ofHours(1);
 
     public JwtTokenService() throws Exception {
         KeyPair keyPair = generateKeyPair();

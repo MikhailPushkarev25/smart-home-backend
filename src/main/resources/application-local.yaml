@@ -1,5 +1,7 @@
-# PostgreSQL R2DBC Configuration
+
 spring:
+  webflux:
+    base-path: /api
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/smart_home
     username: postgres
@@ -25,11 +27,6 @@ spring:
         jwt:
           issuer-uri: http://auth-server/issuer
           jwk-set-uri: http://auth-server/.well-known/jwks.json
-
-  webflux:
-    base-path: /api
-    codecs:
-      max-in-memory-size: 16MB
 
 logging:
   level:
